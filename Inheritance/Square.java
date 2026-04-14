@@ -5,6 +5,8 @@ public class Square extends Rectangle {
         super(1.0, 1.0);
     }
 
+
+    
     public Square(double side) {
         super(side, side);
     }
@@ -13,14 +15,18 @@ public class Square extends Rectangle {
         super(color, filled, side, side);
     }
 
-    public double getSide() {
-        return getLength(); // 👈 استخدم method
+
+
+    
+    public void setSide(double side) {
+        setLength(side); 
+        setWidth(side);  
     }
 
-    public void setSide(double side) {
-        setLength(side); // 👈 method
-        setWidth(side);  // 👈 method
+    public double getSide() {
+        return getLength(); 
     }
+
 
     @Override
     public String toString() {
