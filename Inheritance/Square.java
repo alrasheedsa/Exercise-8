@@ -1,5 +1,4 @@
 package org.Inheritance;
-
 public class Square extends Rectangle {
 
     public Square() {
@@ -15,16 +14,17 @@ public class Square extends Rectangle {
     }
 
     public double getSide() {
-        return this.length;
+        return getLength(); // 👈 استخدم method
     }
 
     public void setSide(double side) {
-        this.length = side;
-        this.width = side;
+        setLength(side); // 👈 method
+        setWidth(side);  // 👈 method
     }
 
     @Override
     public String toString() {
-        return "Square with side = " + getSide() + " is a subclass of " + super.toString();
+        return "Square with side = " + getSide() +
+                " is a subclass of " + super.toString();
     }
 }
